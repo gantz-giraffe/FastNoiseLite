@@ -306,10 +306,10 @@ public class FastNoiseLite
     /// <returns>
     /// Noise output bounded between -1...1
     /// </returns>
-    public float GetNoise(/*FNLfloat*/ float x, /*FNLfloat*/ float y)
+    public float GetNoise(/*FNLfloat*/ float x, /*FNLfloat*/ float y, /*FNLfloat*/ freqx, /*FNLfloat*/ freqy)
     {
-        x *= mFrequency;
-        y *= mFrequency;
+        x *= freqx;
+        y *= freqy;
 
         switch (mNoiseType)
         {
@@ -346,11 +346,11 @@ public class FastNoiseLite
     /// <returns>
     /// Noise output bounded between -1...1
     /// </returns>
-    public float GetNoise(/*FNLfloat*/ float x, /*FNLfloat*/ float y, /*FNLfloat*/ float z)
+    public float GetNoise(/*FNLfloat*/ float x, /*FNLfloat*/ float y, /*FNLfloat*/ float z, /*FNLfloat*/ freqx, /*FNLfloat*/ freqy, /*FNLfloat*/ freqz) 
     {
-        x *= mFrequency;
-        y *= mFrequency;
-        z *= mFrequency;
+        x *= freqx;
+        y *= freqy;
+        z *= freqz;
 
         switch (mTransformType3D)
         {
